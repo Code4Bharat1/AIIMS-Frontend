@@ -1,26 +1,4 @@
-const data = [
-    {
-        imgPath: "/Scholarhat.png",
-        title: "Technologically advanced classroom",
-        description: "Our classrooms are equipped with cutting-edge PPT projectors, enhancing the learning experience with dynamic and interactive presentations. This technology fosters an engaging and advanced educational environment."
-    },
-    {
-        imgPath: "/Book.png",
-        title: "All subjects under one roof",
-        description: "All subjects are offered under one roof, providing a comprehensive and convenient learning experience. Students benefit from a seamless education journey without the need to seek external resources."
-    },
-    {
-        imgPath: "/Book.png",
-        title: "Subject wise best faculty in the industry",
-        description: "Each subject is taught by dedicated faculty experts, ensuring that students receive specialized and in-depth instruction. Our expert teachers bring a wealth of knowledge and experience to foster academic excellence."
-    },
-    {
-        imgPath: "/Book.png",
-        title: "Regular parents-teachers meeting",
-        description: "We hold regular parent-teacher meetings to keep parents informed and engaged in their child's academic progress. This open communication ensures a collaborative approach to each student's success."
-    }
-];
-
+import { whyChooseUs } from "@/utils/data"; 
 const WhyChooseUs = () => {
     return (
         <section className="w-full px-6 md:px-20 py-16 bg-white">
@@ -39,10 +17,10 @@ const WhyChooseUs = () => {
                 {/* Scrollable Dynamic Cards in a Horizontal Row */}
                 <div className="overflow-x-auto w-full scrollbar-hidden ">
                     <div className="flex gap-6 w-max">
-                        {data.map((item) => (
+                        {whyChooseUs.map((item) => (
                             <div
                                 key={item.title}
-                                className="bg-[#AFDDFF] hover:bg-[#2467C9] hover:text-white transition-all duration-500 cursor-pointer text-black rounded-3xl shadow-lg p-8 w-[310px] h-[480px] flex flex-col items-center text-center shrink-0 scrollbar-hidden "
+                                className="bg-[#AFDDFF] hover:bg-[#2467C9] hover:text-white transition-all duration-500 cursor-pointer text-black rounded-3xl shadow-lg p-8 w-[310px] h-[480px] flex flex-col items-center text-center shrink-0"
                             >
                                 <img
                                     src={item.imgPath}
