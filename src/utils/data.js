@@ -1,3 +1,4 @@
+
 export const whyChooseUs = [
     {
         imgPath: "/Scholarhat.png",

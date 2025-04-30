@@ -2,6 +2,8 @@ import Image from "next/image";
 import Navbar from '../components/layout/Navbar'
 import Hero from "@/components/Hero";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
+import About from "@/components/About";
 export default function Home() {
   return (
     <>
@@ -11,7 +13,9 @@ export default function Home() {
         heading1="AIM Tutorials Education Institute"
         heading3="Equipping students with quality education, expert mentorship, and state-of-the-art facilities"
       />
-      <WhyChooseUs/>
+      <WhyChooseUs />
+      <About/>
+      {/* <Testimonials /> */}
     </>
   );
 }
