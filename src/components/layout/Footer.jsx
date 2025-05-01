@@ -6,6 +6,13 @@ import { FaYoutube, FaPhoneAlt } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 
+const footerLinks = [
+  { href: "/about", label: "About" },
+  { href: "/result", label: "Result" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#181d38] text-white py-8 px-4 md:px-16">
@@ -23,16 +30,14 @@ export default function Footer() {
         <div className="sm:mx-auto md:mx-0">
           <h3 className="text-lg font-semibold mb-2">Quick Link</h3>
           <ul className="space-y-1 text-sm">
-            {["About Us", "Results", "Gallery", "Contact Us"].map(
-              (item, index) => (
-                <li key={index} className="flex items-center gap-1">
-                  <IoIosArrowForward className="text-blue-400" />
-                  <Link href="#" className="hover:text-blue-400">
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
+            {footerLinks.map(({ href, label }, index) => (
+              <li key={index} className="flex items-center gap-1">
+                <IoIosArrowForward className="text-blue-400" />
+                <Link href={href} className="hover:text-blue-400">
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
