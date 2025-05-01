@@ -1,12 +1,14 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/layout/Navbar";
 import GalleryImg from "@/components/gallery/GalleryImg";
+import Footer from "@/components/layout/Footer";
 const page = () => {
   return (
     <div>
-        <Navbar/>
-        <Hero heading1="Gallery"/>
-        <GalleryImg/>
+      <Navbar />
+      <Hero heading1="Gallery" />
+      <GalleryImg />
+      <Footer />
     </div>
   );
 }

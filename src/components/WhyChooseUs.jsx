@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
         <section className="w-full px-6 md:px-20 py-16 bg-white">
             <div className={`flex ${isMobile ? "flex-col" : "gap-6"}`}>
                 {/* Fixed Why Choose Us Card */}
-                <div className="bg-[#2467C9] text-white rounded-3xl shadow-lg p-8 w-full max-w-[365px] h-[480px] flex flex-col justify-center shrink-0 mb-6 md:mb-0">
+                <div className="bg-[#2467C9] text-white rounded-3xl p-8 w-full max-w-[365px] h-[480px] flex flex-col justify-center shrink-0 mb-6 md:mb-0">
                     <h2 className="text-4xl font-bold mb-4">Why Choose Us?</h2>
                     <p className="text-lg leading-relaxed">
                         Expert faculty with years of experience in NEET & JEE coaching. <br />
@@ -95,7 +95,7 @@ const WhyChooseUs = () => {
                             {whyChooseUs.map((item) => (
                                 <div
                                     key={item.title}
-                                    className="bg-[#AFDDFF] hover:bg-[#2467C9] hover:text-white transition-all duration-500 cursor-pointer text-black rounded-3xl shadow-lg p-8 w-[310px] h-[480px] flex flex-col items-center text-center shrink-0"
+                                    className="bg-[#AFDDFF] hover:bg-[#2467C9] hover:text-white transition-all duration-500 cursor-pointer text-black rounded-3xl p-8 w-[310px] h-[480px] flex flex-col items-center text-center shrink-0"
                                 >
                                     <img
                                         src={item.imgPath}
