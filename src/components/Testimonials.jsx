@@ -27,22 +27,33 @@ const testimonialsData = [
 
 const Testimonials = () => {
     const [index, setIndex] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
     const current = testimonialsData[index];
 
     // Auto-rotate testimonials every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            setIndex((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
+            if (!isAnimating) {
+                handleNext();
+            }
         }, 1500);
         return () => clearInterval(interval);
-    }, []);
+    }, [isAnimating]);
 
-    const prevTestimonial = () => {
+    const handlePrev = () => {
+        if (isAnimating) return;
+        setIsAnimating(true);
         setIndex((prev) => (prev === 0 ? testimonialsData.length - 1 : prev - 1));
     };
 
-    const nextTestimonial = () => {
+    const handleNext = () => {
+        if (isAnimating) return;
+        setIsAnimating(true);
         setIndex((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
+    };
+
+    const completeAnimation = () => {
+        setIsAnimating(false);
     };
 
     return (
@@ -60,7 +71,7 @@ const Testimonials = () => {
 
             {/* Red testimonial card */}
             <div className="absolute left-[calc(100%-1000px)] top-1/2 -translate-y-1/2 w-[500px] h-72 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-start gap-8 p-9 text-white overflow-hidden">
-                <AnimatePresence mode="wait">
+                <AnimatePresence onExitComplete={completeAnimation}>
                     <motion.div
                         key={index}
                         initial={{ opacity: 0 }}
@@ -91,14 +102,18 @@ const Testimonials = () => {
             {/* Navigation buttons - moved outside the red card */}
             <div className="absolute left-[calc(100%-1000px+460px)] top-1/2 -translate-y-1/2 z-30 flex flex-col gap-2 ml-4">
                 <button
-                    onClick={prevTestimonial}
-                    className="p-2 bg-white/70 hover:bg-white/90 rounded-full text-[#2467C9] cursor-pointer transition-all duration-300"
+                    onClick={handlePrev}
+                    disabled={isAnimating}
+                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90"
+                        }`}
                 >
                     <IoIosArrowForward size={30} />
                 </button>
                 <button
-                    onClick={nextTestimonial}
-                    className="p-2 bg-white/70 hover:bg-white/90 rounded-full text-[#2467C9] cursor-pointer transition-all duration-300"
+                    onClick={handleNext}
+                    disabled={isAnimating}
+                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90"
+                        }`}
                 >
                     <IoIosArrowBack size={30} />
                 </button>
