@@ -22,7 +22,9 @@ const page = () => {
             <video
               className="w-full h-auto rounded shadow-lg"
               controls
-              src="/videos/aim-intro.mp4" // <-- Replace with your actual path
+              src="/about-video.mp4"
+              autoPlay
+              muted
             />
           </div>
 

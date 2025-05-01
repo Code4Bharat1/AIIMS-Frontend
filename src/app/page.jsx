@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import Hero from "@/components/Hero";
@@ -7,8 +8,18 @@ import About from "@/components/About";
 import Footer from "@/components/layout/Footer";
 import TeacherCard from "@/components/InstructorsProfileCard";
 import { instructorDetails } from "@/utils/data";
+import { useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Alumni from "@/components/Alumni";
+
 import FloatingButtons from "@/components/FloatingButtons";
 export default function Home() {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    const scrollAmount = direction === "left" ? -350 : 350;
+    scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  };
 
   const stats = [
     { value: "1232+", label: "Students" },
@@ -38,52 +49,45 @@ export default function Home() {
       </div>
 
       <About />
-      <div className="bg-[#2467C9] py-10 px-4 text-white">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold">Results</h2>
-          <p className="text-lg">Few Of Our Alumni</p>
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-10 flex-wrap">
-          <Image
-            src={"/Alumni/diksha.png"}
-            width={360}
-            height={235}
-            alt="alumni-image"
-            className="rounded-md"
-          />
-          <Image
-            src={"/Alumni/vedika.png"}
-            width={360}
-            height={235}
-            alt="alumni-image"
-            className="rounded-md"
-          />
-          <Image
-            src={"/Alumni/sneha.png"}
-            width={360}
-            height={235}
-            alt="alumni-image"
-            className="rounded-md"
-          />
-        </div>
-      </div>
+      <Alumni />
 
       <div className="flex items-center justify-center flex-col mt-10">
         <h1 className="text-[42px] font-bold text-center">Our Instructors</h1>
 
-        <div className="w-full overflow-x-auto scrollbar-hidden">
-          <div className="flex gap-8 px-4 py-8 min-w-max">
-            {instructorDetails.map((instructor, idx) => (
-              <TeacherCard
-                key={idx}
-                image={instructor.image}
-                name={instructor.name}
-                education={instructor.education}
-                social={instructor.social}
-              />
-            ))}
+        <div className="w-full relative">
+          {/* Left Scroll Button */}
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md "
+          >
+            <FaChevronLeft className="text-[#2467C9]" />
+          </button>
+
+          {/* Scrollable Container */}
+          <div
+            className="w-full overflow-x-auto scrollbar-hidden"
+            ref={scrollRef}
+          >
+            <div className="flex gap-8 px-4 py-8 min-w-max">
+              {instructorDetails.map((instructor, idx) => (
+                <TeacherCard
+                  key={idx}
+                  image={instructor.image}
+                  name={instructor.name}
+                  education={instructor.education}
+                  social={instructor.social}
+                />
+              ))}
+            </div>
           </div>
+
+          {/* Right Scroll Button */}
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md"
+          >
+            <FaChevronRight className="text-[#2467C9]" />
+          </button>
         </div>
       </div>
       <Testimonials />
