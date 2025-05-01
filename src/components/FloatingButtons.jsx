@@ -2,7 +2,7 @@
 
 const FloatingButtons = () => {
     return (
-      <div className="fixed top-[50%] right-6 flex flex-col items-end space-y-3 z-50">
+      <div className="fixed bottom-9 right-6 flex flex-col items-end space-y-3 z-50">
         <a
           href="https://wa.me/+919870780524"
           target="_blank"
