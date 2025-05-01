@@ -7,7 +7,7 @@ const FloatingButtons = () => {
                 href="https://wa.me/+919870780524"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center"
+                className="flex items-center justify-center active:scale-90"
             >
                 <img src="/wsp.png" alt="" className='h-14 w-14 hover:scale-105'/>
             </a>

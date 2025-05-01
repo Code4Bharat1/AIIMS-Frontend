@@ -94,7 +94,7 @@ const Testimonials = () => {
                 <button
                     onClick={handlePrev}
                     disabled={isAnimating}
-                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer shadow-[0px_0px_4px_rgba(0,0,0,0.4)] transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90"
+                    className={`p-2 rounded-full text-[#2467C9] active:scale-90 cursor-pointer shadow-[0px_0px_4px_rgba(0,0,0,0.4)] transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90"
                         }`}
                 >
                     <IoIosArrowForward size={24} className="lg:w-6 lg:h-6" />
@@ -102,7 +102,7 @@ const Testimonials = () => {
                 <button
                     onClick={handleNext}
                     disabled={isAnimating}
-                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer shadow-[0px_0px_4px_rgba(0,0,0,0.4)] transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90 "
+                    className={`p-2 rounded-full text-[#2467C9] active:scale-90 cursor-pointer shadow-[0px_0px_4px_rgba(0,0,0,0.4)] transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90 "
                         }`}
                 >
                     <IoIosArrowBack size={24} className="lg:w-6 lg:h-6" />

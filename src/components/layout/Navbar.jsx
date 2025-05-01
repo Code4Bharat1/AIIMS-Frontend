@@ -19,7 +19,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const linkClass = (href) =>
-        `transition-colors duration-300 ${pathname === href ? "text-blue-600 font-semibold" : "text-black"
+        `transition-colors duration-300  ${pathname === href ? "text-blue-600 font-semibold" : "text-black"
         }`;
 
     return (

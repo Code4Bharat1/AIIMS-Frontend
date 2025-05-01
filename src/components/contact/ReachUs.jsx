@@ -51,10 +51,10 @@ const ReachUs = () => {
 
         try {
             await emailjs.send(
-                'service_nxg7pyg',     // 🔁 Replace with your EmailJS service ID
-                'template_1p1x39y',    // 🔁 Replace with your EmailJS template ID
+                'service_nxg7pyg',
+                'template_1p1x39y',
                 templateParams,
-                'hTsTL8p_B8CsA9X-e'      // 🔁 Replace with your EmailJS public key
+                'hTsTL8p_B8CsA9X-e'
             );
 
             setSuccess('Message sent successfully!');
@@ -75,7 +75,7 @@ const ReachUs = () => {
 
     return (
         <div className="flex flex-col lg:flex-row justify-end relative mt-10 mb-10 px-4 lg:px-0">
-            <div className="hidden lg:flex bg-[#AFDDFF] h-[400px] w-[700px] rounded-l-full relative z-10 items-center justify-between px-10 pl-52">
+            <div className="hidden lg:flex bg-[#AFDDFF] h-[500px] w-[700px] rounded-l-full relative z-10 items-center justify-between px-10 pl-52">
                 <div className="flex-1" />
                 <div className="flex flex-col gap-9">
                     <h1 className="text-4xl">Feel free to Contact <br /> Us</h1>
@@ -94,7 +94,7 @@ const ReachUs = () => {
                 </p>
             </div>
 
-            <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 h-84 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
+            <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 h-96 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
                 <form
                     onSubmit={handleSubmit}
                     className="absolute inset-0 p-6 lg:p-9 flex flex-wrap justify-center items-center lg:items-start gap-6 lg:gap-8 text-center lg:text-left"
@@ -111,7 +111,7 @@ const ReachUs = () => {
                     <div className="flex w-full justify-end">
                         <button
                             type="submit"
-                            className="bg-[#AFDDFF] hover:bg-[#bfe3ff] cursor-pointer px-4 py-2 rounded-lg text-black self-end"
+                            className="bg-[#AFDDFF] hover:bg-[#bfe3ff] cursor-pointer px-4 py-2 rounded-lg text-black self-end active:scale-90"
                             disabled={isSending}
                         >
                             {isSending ? 'Sending...' : 'Send Message'}
