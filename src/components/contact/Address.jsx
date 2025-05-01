@@ -1,6 +1,5 @@
 'use client';
 
-
 const Address = () => {
     return (
         <div className="flex flex-col lg:flex-row justify-start relative mt-10 mb-10 px-4 lg:px-0">
@@ -11,7 +10,7 @@ const Address = () => {
                     <h1 className="text-4xl">Feel free to Contact <br /> Us</h1>
                     <p className="text-md text-left">
                         <span className="font-semibold">Get In Touch</span><br />
-                        At AIM Tutorials , we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
+                        At AIM Tutorials, we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
                     </p>
                 </div>
             </div>
@@ -21,24 +20,22 @@ const Address = () => {
                 <h1 className="text-3xl font-bold mb-2">Feel free to Contact Us</h1>
                 <p className="text-2xl text-[#2467C9]">
                     <span className="font-semibold">Get In Touch</span><br />
-                    At AIM Tutorials , we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
+                    At AIM Tutorials, we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
                 </p>
             </div>
 
-            {/* Red testimonial card */}
+            {/* Map card */}
             <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 h-84 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
-                <form className="absolute inset-0 p-6 lg:p-9 flex flex-wrap justify-center items-center lg:items-start gap-6 lg:gap-8 text-center lg:text-left">
-                    <input type="text" name="" id="" placeholder="Your Name" className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <input type="text" name="" id="" placeholder="Your Email" className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <input type="text" name="" id="" placeholder="Mobile Number" className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <input type="text" name="" id="" placeholder="Subject" className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <textarea type="text" name="" id="" placeholder="Message" className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full resize-none " />
-                    <div className="flex w-full justify-end">
-                        <button className="bg-[#AFDDFF] hover:bg-[#bfe3ff] cursor-pointer px-4 py-2 rounded-lg text-black self-end">Send Message</button>
-                    </div>
-                </form>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7542.1080115727145!2d72.900999!3d19.061363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7bf91346769%3A0x540d723b75c1ec50!2sAIM%20TUTORIALS...%20Prof.kishor%20sir!5e0!3m2!1sen!2sin!4v1746089026216!5m2!1sen!2sin"
+                    width="100%"
+                    height="500"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
             </div>
-
         </div>
     );
 };
