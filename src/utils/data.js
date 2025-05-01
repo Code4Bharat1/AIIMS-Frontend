@@ -107,6 +107,97 @@ export const instructorDetails = [
             linkedin: "https://linkedin.com/",
         },
     },
+
+
+
+    {
+        name: "Sakeena Mam",
+        education: "Book keeping & Account 11+ 12(Commerce)",
+        image: "/instructor/Sakeena.jpg",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "Tanvi Khanna",
+        education: "ENGLISH 11+ 12( Science/Commerce)",
+        image: "/instructor/Tanvi.jpg",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "Vaibhav Gaikwad",
+        education: "SP 11+ 12(Commerce)",
+        image: "/instructor/Vaibhav.jpg",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "Ashfak A Shaikh",
+        education: "Physics 11 + 12 (NEET/MHT-CET/JEE)",
+        image: "/instructor/Ashfak.jpg",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "Santosh Baliram Jadhav",
+        education: "Chemistry 11 + 12 (NEET/JEE/MHT-CET)",
+        image: "/instructor/Santosh.jpg",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "Yasmeen Khan",
+        education: "OCM 11+ 12(Commerce)",
+        image: "/instructor/Yasmeen.png",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "Althaf Ahammed",
+        education: "Msc in Chemistry",
+        image: "/instructor/Althaf.png",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "SONAL GHODKE",
+        education: "Administrative Coordinator",
+        image: "/instructor/Sonal.png",
+        social: {
+            facebook: "https://facebook.com/",
+            youtube: "https://youtube.com/",
+            instagram: "https://instagram.com/",
+            linkedin: "https://linkedin.com/",
+        },
+    },
 ]
 
 export const testimonialsData = [
@@ -129,3 +220,42 @@ export const testimonialsData = [
         review: "The personal attention I receive here helps me understand everything better.",
     },
 ];
+
+export const resultImage = [
+    {
+        id: 1,
+        imgPath: "/Results/r1.png"
+    },
+    {
+        id: 2,
+        imgPath: "/Results/r2.png"
+    },
+    {
+        id: 3,
+        imgPath: "/Results/r3.png"
+    },
+    {
+        id: 4,
+        imgPath: "/Results/r4.png"
+    },
+    {
+        id: 5,
+        imgPath: "/Results/r5.png"
+    },
+    {
+        id: 6,
+        imgPath: "/Results/r6.png"
+    },
+    {
+        id: 7,
+        imgPath: "/Results/r7.png"
+    },
+    {
+        id: 8,
+        imgPath: "/Results/r8.png"
+    },
+    {
+        id: 9,
+        imgPath: "/Results/r9.png"
+    },
+]
