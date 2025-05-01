@@ -2,12 +2,12 @@
 
 const About = () => {
     return (
-        <div className="mb-24 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48">
+        <div className="mb-24 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-18">
             <h1 className="text-3xl sm:text-4xl font-bold text-center mt-12 mb-6 md:mb-12">
                 About Us
             </h1>
-            <div className="flex flex-col xl:flex-row items-center gap-10">
-                <div className="flex-1 text-justify text-md sm:text-md lg:text-2xl leading-relaxed">
+            <div className="flex flex-col justify-between md:w-[1400px] mx-auto xl:flex-row items-center gap-10 md:gap-50">
+                <div className="flex-1 text-left text-md sm:text-md lg:text-2xl leading-relaxed">
                     <p>
                         AIM Tutorials is a leading coaching institute committed to academic excellence for students from grades 8 to 12.
                         Our programs are designed to build strong subject foundations and prepare students for competitive exams like NEET and JEE.
