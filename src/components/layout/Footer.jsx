@@ -53,10 +53,14 @@ export default function Footer() {
             <FaPhoneAlt />
             +91 9870780524 / +91 8779955027
           </p>
-          <p className="mt-1 text-sm flex items-center gap-2 hover:text-blue-400 cursor-pointer">
-            <IoMail />
+          <a
+            href="mailto:ghodke.kishor@yahoo.in"
+            className="mt-1 text-sm flex items-center gap-2 hover:text-blue-400 transition-colors duration-200"
+          >
+            <IoMail className="text-lg" />
             ghodke.kishor@yahoo.in
-          </p>
+          </a>
+
           <div className="flex space-x-2 mt-3">
             {[IoLogoInstagram, RiFacebookFill, FaYoutube].map((Icon, i) => (
               <div key={i} className="border border-white rounded-full p-1">

@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
 
     return (
         <section className="w-full px-6 md:px-20 py-16 bg-white">
-            <div className={`flex ${isMobile ? "flex-col" : "gap-6"}`}>
+            <div className={`flex ${isMobile ? "flex-col items-center" : "gap-6"}`}>
                 {/* Fixed Why Choose Us Card */}
                 <div className="bg-[#2467C9] text-white rounded-3xl p-8 w-full max-w-[365px] h-[480px] flex flex-col justify-center shrink-0 mb-6 md:mb-0">
                     <h2 className="text-4xl font-bold mb-4">Why Choose Us?</h2>
