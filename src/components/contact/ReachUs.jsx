@@ -13,11 +13,11 @@ const ReachUs = () => {
     });
 
     const [isSending, setIsSending] = useState(false);
-    const [status, setStatus] = useState({ error: '', success: '' });
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const isFormValid = () => {
@@ -35,30 +35,39 @@ const ReachUs = () => {
         e.preventDefault();
 
         if (!isFormValid()) {
-            setStatus({ error: 'Please fill all fields correctly.', success: '' });
+            setError('Please fill all fields correctly.');
             return;
         }
 
         setIsSending(true);
-        setStatus({ error: '', success: '' });
+        setError('');
+        setSuccess('');
+
+        const templateParams = {
+            ...formData,
+            time: new Date().toLocaleString(),
+            to_email: 'tiwariv1669@gmail.com',
+        };
 
         try {
             await emailjs.send(
                 'service_nxg7pyg',
                 'template_1p1x39y',
-                {
-                    ...formData,
-                    time: new Date().toLocaleString(),
-                    to_email: 'tiwariv1669@gmail.com',
-                },
+                templateParams,
                 'hTsTL8p_B8CsA9X-e'
             );
 
-            setStatus({ error: '', success: 'Message sent successfully!' });
-            setFormData({ name: '', email: '', mobile: '', subject: '', message: '' });
+            setSuccess('Message sent successfully!');
+            setFormData({
+                name: '',
+                email: '',
+                mobile: '',
+                subject: '',
+                message: '',
+            });
         } catch (err) {
+            setError('Failed to send message. Please try again later.');
             console.error(err);
-            setStatus({ error: 'Failed to send message. Please try again later.', success: '' });
         } finally {
             setIsSending(false);
         }
@@ -66,60 +75,89 @@ const ReachUs = () => {
 
     return (
         <div className="flex flex-col lg:flex-row justify-end relative mt-10 mb-10 px-4 lg:px-0">
-            {/* Left Text Section (Desktop) */}
-            <div className="hidden lg:flex bg-[#AFDDFF] h-[500px] w-[700px] rounded-l-full relative z-10 items-center px-10 pl-52">
+            <div className="hidden lg:flex bg-[#AFDDFF] h-[400px] w-[700px] rounded-l-full relative z-10 items-center justify-between px-10 pl-52">
+                <div className="flex-1" />
                 <div className="flex flex-col gap-9">
-                    <h1 className="text-4xl font-semibold leading-snug">Feel free to Contact Us</h1>
-                    <p className="text-md">
+                    <h1 className="text-4xl">Feel free to Contact <br /> Us</h1>
+                    <p className="text-md text-left">
                         <span className="font-semibold">Get In Touch</span><br />
-                        At AIM Tutorials, we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
+                        At AIM Tutorials , we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
                     </p>
                 </div>
             </div>
 
-            {/* Text Section (Mobile) */}
             <div className="lg:hidden mb-8 text-center">
                 <h1 className="text-3xl font-bold mb-2">Feel free to Contact Us</h1>
-                <p className="text-lg text-[#2467C9]">
+                <p className="text-2xl text-[#2467C9]">
                     <span className="font-semibold">Get In Touch</span><br />
-                    At AIM Tutorials, we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
+                    At AIM Tutorials , we offer advanced classrooms, personalized attention, regular parent-teacher meetings, top-notch teachers, and a leading curriculum. Experience the best in education with us.
                 </p>
             </div>
 
-            {/* Form */}
-            <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 h-auto bg-[#2467C9] z-20 rounded-2xl flex justify-center p-6 lg:p-9 text-white mx-auto lg:mx-0">
-                <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
-                    {['name', 'email', 'mobile', 'subject'].map((field) => (
-                        <input
-                            key={field}
-                            type={field === 'email' ? 'email' : field === 'mobile' ? 'tel' : 'text'}
-                            name={field}
-                            placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
-                            value={formData[field]}
-                            onChange={handleChange}
-                            className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none"
-                            required
-                        />
-                    ))}
+            <div className="relative lg:absolute w-[50%] lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
+                <form
+                    onSubmit={handleSubmit}
+                    className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 text-center lg:text-left"
+                >
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none"
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full"
+                    />
+                    <input
+                        type="tel"
+                        name="mobile"
+                        placeholder="Mobile Number"
+                        value={formData.mobile}
+                        onChange={handleChange}
+                        className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full"
+                    />
+                    <input
+                        type="text"
+                        name="subject"
+                        placeholder="Subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full"
+                    />
                     <textarea
                         name="message"
                         placeholder="Message"
                         value={formData.message}
                         onChange={handleChange}
-                        className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none resize-none h-28"
-                        required
+                        className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full resize-none col-span-1 lg:col-span-2"
                     />
-
-                    {status.error && <p className="text-red-300 text-sm">{status.error}</p>}
-                    {status.success && <p className="text-green-300 text-sm">{status.success}</p>}
-
-                    <button
-                        type="submit"
-                        className="bg-[#AFDDFF] hover:bg-[#bfe3ff] px-4 py-2 rounded-lg text-black active:scale-95 transition-all"
-                        disabled={isSending}
-                    >
-                        {isSending ? 'Sending...' : 'Send Message'}
-                    </button>
+                    {error && (
+                        <p className="text-red-300 text-sm w-full text-left col-span-1 lg:col-span-2">
+                            {error}
+                        </p>
+                    )}
+                    {success && (
+                        <p className="text-green-300 text-sm w-full text-left col-span-1 lg:col-span-2">
+                            {success}
+                        </p>
+                    )}
+                    <div className="flex w-full justify-end col-span-1 lg:col-span-2">
+                        <button
+                            type="submit"
+                            className="bg-[#AFDDFF] hover:bg-[#bfe3ff] cursor-pointer px-4 py-2 rounded-lg text-black self-end active:scale-90"
+                            disabled={isSending}
+                        >
+                            {isSending ? 'Sending...' : 'Send Message'}
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
