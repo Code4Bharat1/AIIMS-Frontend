@@ -1,17 +1,15 @@
 'use client';
 
-import { FaWhatsapp } from 'react-icons/fa';
-
 const FloatingButtons = () => {
     return (
         <div className="fixed top-[50%] right-6 flex-col items-end space-y-3 z-50 lg:block hidden">
             <a
-                href="https://wa.me/9870780524"
+                href="https://wa.me/+919870780524"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white h-0 font-medium rounded-full shadow-lg transition"
+                className="flex items-center justify-center"
             >
-                <FaWhatsapp size={50} />
+                <img src="/wsp.png" alt="" className='h-14 w-14 hover:scale-105'/>
             </a>
         </div>
     );
