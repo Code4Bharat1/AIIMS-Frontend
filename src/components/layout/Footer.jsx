@@ -55,7 +55,7 @@ export default function Footer() {
           </p>
           <p className="mt-1 text-sm flex items-center gap-2 hover:text-blue-400 cursor-pointer">
             <IoMail />
-            ghodke.kishor@yahoo.in
+            <a href="mailto:ghodke.kishor@yahoo.in">ghodke.kishor@yahoo.in</a>
           </p>
           <div className="flex space-x-2 mt-3">
             {[IoLogoInstagram, RiFacebookFill, FaYoutube].map((Icon, i) => (
