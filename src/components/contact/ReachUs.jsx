@@ -94,21 +94,21 @@ const ReachUs = () => {
                 </p>
             </div>
 
-            <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 h-96 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
+            <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 md:h-96 h-[500px]  bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
                 <form
                     onSubmit={handleSubmit}
                     className="absolute inset-0 p-6 lg:p-9 flex flex-wrap justify-center items-center lg:items-start gap-6 lg:gap-8 text-center lg:text-left"
                 >
-                    <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <input type="tel" name="mobile" placeholder="Mobile Number" value={formData.mobile} onChange={handleChange} className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none" />
-                    <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full resize-none" />
+                    <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="bg-[#D9D9D9] p-2 w-full rounded-lg text-black text-md outline-none" />
+                    <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="bg-[#D9D9D9] p-2 w-full rounded-lg text-black text-md outline-none" />
+                    <input type="tel" name="mobile" placeholder="Mobile Number" value={formData.mobile} onChange={handleChange} className="bg-[#D9D9D9] p-2 w-full rounded-lg text-black text-md outline-none" />
+                    <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="bg-[#D9D9D9] p-2 w-full rounded-lg text-black text-md outline-none" />
+                    <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} className="bg-[#D9D9D9] p-2  rounded-lg text-black text-md outline-none w-full resize-none" />
 
                     {error && <p className="text-red-300 text-sm w-full text-left">{error}</p>}
                     {success && <p className="text-green-300 text-sm w-full text-left">{success}</p>}
 
-                    <div className="flex w-full justify-end">
+                    <div className="flex w-full justify-center md:justify-end">
                         <button
                             type="submit"
                             className="bg-[#AFDDFF] hover:bg-[#bfe3ff] cursor-pointer px-4 py-2 rounded-lg text-black self-end active:scale-90"
