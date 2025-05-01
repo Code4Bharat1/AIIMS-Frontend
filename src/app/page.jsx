@@ -15,7 +15,8 @@ export default function Home() {
       />
       <WhyChooseUs />
       <About/>
-      {/* <Testimonials /> */}
+      <Testimonials />
+      <br /><br /><br />
     </>
   );
 }

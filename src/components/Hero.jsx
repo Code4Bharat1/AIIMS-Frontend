@@ -5,14 +5,13 @@ const Hero = ({ heading2, heading1, heading3 }) => {
     const [show, setShow] = useState(false);
 
     useEffect(() => {
-        // Delay the animation after component mounts
-        const timer = setTimeout(() => setShow(true), 100); // 300ms delay
-        return () => clearTimeout(timer); // Clean up the timer
+        const timer = setTimeout(() => setShow(true), 100);
+        return () => clearTimeout(timer);
     }, []);
 
     return (
         <section
-            className="relative bg-[url('/Class.jpg')] bg-cover bg-center h-[670px] flex items-center justify-center text-white text-center -mt-9"
+            className="relative bg-[url('/Class.jpg')] bg-cover bg-center min-h-[500px] sm:min-h-[600px] md:min-h-[670px] flex items-center justify-center text-white text-center -mt-9"
         >
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/50 z-0"></div>

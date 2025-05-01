@@ -21,3 +21,43 @@ export const whyChooseUs = [
         description: "We hold regular parent-teacher meetings to keep parents informed and engaged in their child's academic progress. This open communication ensures a collaborative approach to each student's success."
     }
 ];
+
+
+export const galleryImgs = [
+    {
+        id: 1,
+        imgPath: "/GIMG1.png",
+    },
+    {
+        id: 2,
+        imgPath: "/GIMG2.png",
+    },
+    {
+        id: 3,
+        imgPath: "/GIMG3.png",
+    },
+    {
+        id: 4,
+        imgPath: "/GIMG4.png",
+    },
+    {
+        id: 5,
+        imgPath: "/GIMG5.png",
+    },
+    {
+        id: 6,
+        imgPath: "/GIMG6.png",
+    },
+    {
+        id: 7,
+        imgPath: "/GIMG7.png",
+    },
+    {
+        id: 8,
+        imgPath: "/GIMG8.png",
+    },
+    {
+        id: 9,
+        imgPath: "/GIMG9.png",
+    },
+]
