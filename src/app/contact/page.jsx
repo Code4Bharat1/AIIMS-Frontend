@@ -1,3 +1,4 @@
+import ReachUs from "@/components/contact/ReachUs";
 import Hero from "@/components/Hero";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -7,6 +8,7 @@ export default function contactPage() {
     <div>
       <Navbar />
       <Hero heading1="Contact Us" />
+      <ReachUs />
       <Footer />
     </div>
   );

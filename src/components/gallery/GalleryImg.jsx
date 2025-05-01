@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 import { galleryImgs } from '@/utils/data';
 
 const GalleryImg = () => {
@@ -29,14 +29,19 @@ const GalleryImg = () => {
           <div
             key={id}
             onClick={() => handleClick(imgPath)}
-            className="cursor-pointer"
+            className="cursor-pointer relative group"
           >
             <img
               src={imgPath}
               alt={`Gallery image ${id}`}
-              className="w-full h-auto object-cover shadow-md transition-transform duration-300 hover:scale-105"
+              className="w-full h-auto object-cover shadow-md transition-transform duration-300 "
               ref={(el) => (imgRefs.current[imgPath] = el)}
             />
+
+            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <ZoomIn className="text-white w-8 h-8 mb-2" />
+              <p className="text-white text-lg">Zoom In</p>
+            </div>
           </div>
         ))}
       </div>
@@ -51,7 +56,6 @@ const GalleryImg = () => {
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImg(null)}
           >
-            {/* Image Container */}
             <motion.div
               className="relative"
               initial={{
@@ -72,15 +76,13 @@ const GalleryImg = () => {
               transition={{ duration: 0.4 }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Icon over Image */}
               <button
                 onClick={() => setSelectedImg(null)}
-                className="absolute top-2 right-2  text-black rounded-full p-1 cursor-pointer"
+                className="absolute top-2 right-2 text-black rounded-full p-1 cursor-pointer"
               >
                 <X size={30} strokeWidth={5} />
               </button>
 
-              {/* Modal Image */}
               <img
                 src={selectedImg}
                 alt="Enlarged"

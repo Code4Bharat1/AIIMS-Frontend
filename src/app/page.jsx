@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Footer from "@/components/layout/Footer";
 import TeacherCard from "@/components/InstructorsProfileCard";
 import { instructorDetails } from "@/utils/data";
+import FloatingButtons from "@/components/FloatingButtons";
 export default function Home() {
 
   const stats = [
@@ -68,7 +69,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center flex-col">
+      <div className="flex items-center justify-center flex-col mt-10">
         <h1 className="text-[42px] font-bold text-center">Our Instructors</h1>
 
         <div className="w-full overflow-x-auto scrollbar-hidden">
@@ -86,6 +87,7 @@ export default function Home() {
         </div>
       </div>
       <Testimonials />
+      <FloatingButtons />
       <Footer />
     </>
   );

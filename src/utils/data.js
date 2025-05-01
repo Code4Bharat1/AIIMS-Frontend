@@ -61,6 +61,7 @@ export const galleryImgs = [
         imgPath: "/GIMG9.png",
     },
 ]
+
 export const instructorDetails = [
     {
         name: "Hrishi More",
@@ -107,3 +108,24 @@ export const instructorDetails = [
         },
     },
 ]
+
+export const testimonialsData = [
+    {
+        imgPath: "/s1.png",
+        name: "Siddharth Talreja",
+        clg: "12 Sci - Swami College",
+        review: "Regular parent-teacher meetings keep my parents updated on my progress.",
+    },
+    {
+        imgPath: "/s2.png",
+        name: "Adnan Khan",
+        clg: "12 Sci - AFAC College",
+        review: "The technologically advanced classrooms make learning so much fun and effective!",
+    },
+    {
+        imgPath: "/s3.png",
+        name: "Shreya Mishra",
+        clg: "12 Sci - Somaiya College",
+        review: "The personal attention I receive here helps me understand everything better.",
+    },
+];

@@ -3,27 +3,7 @@
 import { useState, useEffect } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
-
-const testimonialsData = [
-    {
-        imgPath: "/s1.png",
-        name: "Siddharth Talreja",
-        clg: "12 Sci - Swami College",
-        review: "Regular parent-teacher meetings keep my parents updated on my progress.",
-    },
-    {
-        imgPath: "/s2.png",
-        name: "Adnan Khan",
-        clg: "12 Sci - AFAC College",
-        review: "The technologically advanced classrooms make learning so much fun and effective!",
-    },
-    {
-        imgPath: "/s3.png",
-        name: "Shreya Mishra",
-        clg: "12 Sci - Somaiya College",
-        review: "The personal attention I receive here helps me understand everything better.",
-    },
-];
+import { testimonialsData } from "@/utils/data";
 
 const Testimonials = () => {
     const [index, setIndex] = useState(0);
@@ -36,7 +16,7 @@ const Testimonials = () => {
             if (!isAnimating) {
                 handleNext();
             }
-        }, 1500);
+        }, 5000);
         return () => clearInterval(interval);
     }, [isAnimating]);
 
@@ -57,9 +37,9 @@ const Testimonials = () => {
     };
 
     return (
-        <div className="flex justify-end relative mb-10">
-            {/* Blue background div */}
-            <div className="flex bg-[#AFDDFF] h-[400px] w-[700px] rounded-l-full relative z-10 items-center justify-between px-10">
+        <div className="flex flex-col lg:flex-row justify-end relative mt-20 mb-20 px-4 lg:px-0">
+            {/* Blue background div - hidden on mobile, shown on lg screens */}
+            <div className="hidden lg:flex bg-[#AFDDFF] h-[400px] w-[700px] rounded-l-full relative z-10 items-center justify-between px-10">
                 <div className="flex-1" />
                 <div className="flex flex-col gap-9">
                     <h1 className="text-4xl">Testimonials</h1>
@@ -69,8 +49,17 @@ const Testimonials = () => {
                 </div>
             </div>
 
+            {/* Mobile header - shown only on small screens */}
+            <div className="lg:hidden mb-8 text-center">
+                <h1 className="text-3xl font-bold mb-2">Testimonials</h1>
+                <p className="text-2xl text-[#2467C9]">
+                    What Our Students Say!
+                </p>
+            </div>
+
             {/* Red testimonial card */}
-            <div className="absolute left-[calc(100%-1000px)] top-1/2 -translate-y-1/2 w-[500px] h-72 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-start gap-8 p-9 text-white overflow-hidden">
+            {/* Red testimonial card */}
+            <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1000px)] lg:top-1/2 lg:-translate-y-1/2 h-72 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
                 <AnimatePresence onExitComplete={completeAnimation}>
                     <motion.div
                         key={index}
@@ -78,20 +67,20 @@ const Testimonials = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="absolute inset-0 p-9 flex flex-col justify-center items-start gap-8"
+                        className="absolute inset-0 p-6 lg:p-9 flex flex-col justify-center items-center lg:items-start gap-6 lg:gap-8 text-center lg:text-left"
                     >
-                        <div className="text-xl text-left">"{current.review}"</div>
-                        <div className="flex items-center justify-between w-full">
+                        <div className="text-lg lg:text-xl text-center">"{current.review}"</div>
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-full gap-4">
                             {/* Student Info */}
                             <div className="flex items-center gap-4">
                                 <img
                                     src={current.imgPath}
                                     alt={current.name}
-                                    className="h-20 w-20 rounded-full"
+                                    className="h-16 w-16 lg:h-20 lg:w-20 rounded-full"
                                 />
                                 <div>
-                                    <p className="text-xl font-light">{current.clg}</p>
-                                    <p className="text-3xl">{current.name}</p>
+                                    <p className="text-base lg:text-xl font-light">{current.clg}</p>
+                                    <p className="text-2xl lg:text-3xl">{current.name}</p>
                                 </div>
                             </div>
                         </div>
@@ -99,23 +88,24 @@ const Testimonials = () => {
                 </AnimatePresence>
             </div>
 
-            {/* Navigation buttons - moved outside the red card */}
-            <div className="absolute left-[calc(100%-1000px+460px)] top-1/2 -translate-y-1/2 z-30 flex flex-col gap-2 ml-4">
+
+            {/* Navigation buttons - position changes based on screen size */}
+            <div className="flex lg:flex-col flex-row-reverse justify-center gap-4 lg:gap-2 mt-6 lg:mt-0 lg:absolute lg:left-[calc(100%-1000px+460px)] lg:top-1/2 lg:-translate-y-1/2 z-30 lg:ml-4">
                 <button
                     onClick={handlePrev}
                     disabled={isAnimating}
-                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90"
+                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer shadow-[0px_0px_4px_rgba(0,0,0,0.4)] transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90"
                         }`}
                 >
-                    <IoIosArrowForward size={30} />
+                    <IoIosArrowForward size={24} className="lg:w-6 lg:h-6" />
                 </button>
                 <button
                     onClick={handleNext}
                     disabled={isAnimating}
-                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90"
+                    className={`p-2 rounded-full text-[#2467C9] cursor-pointer shadow-[0px_0px_4px_rgba(0,0,0,0.4)] transition-all duration-300 ${isAnimating ? "bg-white/30" : "bg-white/70 hover:bg-white/90 "
                         }`}
                 >
-                    <IoIosArrowBack size={30} />
+                    <IoIosArrowBack size={24} className="lg:w-6 lg:h-6" />
                 </button>
             </div>
         </div>
