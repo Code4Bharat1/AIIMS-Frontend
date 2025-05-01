@@ -84,7 +84,7 @@ const GalleryImg = () => {
               <img
                 src={selectedImg}
                 alt="Enlarged"
-                className="rounded-lg shadow-xl max-h-[80vh] max-w-[90vw]"
+                className="shadow-xl w-[600px] h-[600px] max-h-[80vh] max-w-[90vw]"
               />
             </motion.div>
           </motion.div>
