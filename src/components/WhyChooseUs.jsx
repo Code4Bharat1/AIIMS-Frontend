@@ -79,7 +79,7 @@ const WhyChooseUs = () => {
                 <div className="relative w-full overflow-hidden">
                     {(canScrollLeft || isMobile) && (
                         <button
-                            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition-all"
+                            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition-all active:scale-90"
                             onClick={() => scrollTo('left')}
                             aria-label="Scroll left"
                         >
@@ -111,7 +111,7 @@ const WhyChooseUs = () => {
 
                     {(canScrollRight || isMobile) && (
                         <button
-                            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition-all"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition-all x"
                             onClick={() => scrollTo('right')}
                             aria-label="Scroll right"
                         >
