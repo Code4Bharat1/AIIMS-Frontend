@@ -16,7 +16,7 @@ const Testimonials = () => {
             if (!isAnimating) {
                 handleNext();
             }
-        }, 5000);
+        }, 1500);
         return () => clearInterval(interval);
     }, [isAnimating]);
 

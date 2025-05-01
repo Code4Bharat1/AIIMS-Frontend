@@ -68,7 +68,7 @@ export default function Home() {
             className="w-full overflow-x-auto scrollbar-hidden"
             ref={scrollRef}
           >
-            <div className="flex gap-8 px-4 py-8 min-w-max">
+            <div className="flex gap-8 px-3 py-8 min-w-max">
               {instructorDetails.map((instructor, idx) => (
                 <TeacherCard
                   key={idx}
