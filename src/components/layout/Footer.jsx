@@ -70,8 +70,8 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2">About Us</h3>
           <p className="text-sm">
             At AIM Tutorials, we offer advanced classrooms, parent-teacher
-            meetings, top-notch teacher, and a leading curriculum. Experience
-            the best in education with us.
+            meetings, topnotch teacher, and a leading curriculum. Experience
+            the best in education with us..
           </p>
         </div>
       </div>
