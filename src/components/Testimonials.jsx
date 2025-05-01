@@ -2,7 +2,7 @@
 
 const Testimonials = () => {
     return (
-        <div className="flex justify-end relative">
+        <div className="flex justify-end relative mb-10">
             {/* Blue rounded div */}
             <div className="flex bg-[#AFDDFF] h-[400px] w-[700px] rounded-l-full relative z-10"></div>
 
