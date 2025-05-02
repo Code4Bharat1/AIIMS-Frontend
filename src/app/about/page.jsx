@@ -1,4 +1,5 @@
 "use client"
+import About from '@/components/common/About';
 import Hero from '@/components/common/Hero';
 import TeacherCard from '@/components/common/InstructorsProfileCard';
 import Footer from '@/components/layout/Footer';
