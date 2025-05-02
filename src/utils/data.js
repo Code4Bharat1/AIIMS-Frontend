@@ -64,17 +64,6 @@ export const galleryImgs = [
 
 export const instructorDetails = [
     {
-        name: "Hrishi More",
-        education: "Biology 11 + 12 (NEET/MHT-CET)",
-        image: "/instructor/Hrishi.jpg",
-        social: {
-            facebook: "https://www.facebook.com/profile.php?id=100091183034102&amp;mibextid=ZbWKwL",
-            youtube: "https://youtube.com/@kishorghodke-xe6xn?si=DeE7pLXxbuq_kL2q",
-            instagram: "https://www.instagram.com/_aim_tutorials?igsh=eGV0NGNlcmticngw",
-            linkedin: "https://linkedin.com/",
-        },
-    },
-    {
         name: "Kishor Ghodke",
         education: "Qualication- MSC - BEd (Maths)",
         image: "/instructor/Kishor.jpg",
@@ -85,6 +74,30 @@ export const instructorDetails = [
             linkedin: "https://linkedin.com/",
         },
     },
+    {
+        name: "SONAL GHODKE",
+        education: "Administrative Coordinator",
+        image: "/instructor/Sonal.png",
+        social: {
+            facebook: "https://www.facebook.com/profile.php?id=100091183034102&amp;mibextid=ZbWKwL",
+            youtube: "https://youtube.com/@kishorghodke-xe6xn?si=DeE7pLXxbuq_kL2q",
+            instagram: "https://www.instagram.com/_aim_tutorials?igsh=eGV0NGNlcmticngw",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    {
+        name: "Hrishi More",
+        education: "Biology 11 + 12 (NEET/MHT-CET)",
+        image: "/instructor/Hrishi.jpg",
+        social: {
+            facebook: "https://www.facebook.com/profile.php?id=100091183034102&amp;mibextid=ZbWKwL",
+            youtube: "https://youtube.com/@kishorghodke-xe6xn?si=DeE7pLXxbuq_kL2q",
+            instagram: "https://www.instagram.com/_aim_tutorials?igsh=eGV0NGNlcmticngw",
+            linkedin: "https://linkedin.com/",
+        },
+    },
+    
+    
     {
         name: "Shifa Khan",
         education: "Biology 11+12(NEET)",
@@ -187,37 +200,33 @@ export const instructorDetails = [
             linkedin: "https://linkedin.com/",
         },
     },
-    {
-        name: "SONAL GHODKE",
-        education: "Administrative Coordinator",
-        image: "/instructor/Sonal.png",
-        social: {
-            facebook: "https://www.facebook.com/profile.php?id=100091183034102&amp;mibextid=ZbWKwL",
-            youtube: "https://youtube.com/@kishorghodke-xe6xn?si=DeE7pLXxbuq_kL2q",
-            instagram: "https://www.instagram.com/_aim_tutorials?igsh=eGV0NGNlcmticngw",
-            linkedin: "https://linkedin.com/",
-        },
-    },
+    
 ]
 
 export const testimonialsData = [
     {
-        imgPath: "/s1.png",
+        imgPath: "/Testimonials/s1.png",
         name: "Siddharth Talreja",
         clg: "12 Sci - Swami College",
         review: "Regular parent-teacher meetings keep my parents updated on my progress.",
     },
     {
-        imgPath: "/s2.png",
+        imgPath: "/Testimonials/s2.png",
         name: "Adnan Khan",
         clg: "12 Sci - AFAC College",
         review: "The technologically advanced classrooms make learning so much fun and effective!",
     },
     {
-        imgPath: "/s3.png",
+        imgPath: "/Testimonials/s3.png",
         name: "Shreya Mishra",
         clg: "12 Sci - Somaiya College",
         review: "The personal attention I receive here helps me understand everything better.",
+    },
+    {
+        imgPath: "/Testimonials/s4.png",
+        name: "Apurva Nikam",
+        clg: "12 Com - AFAC College",
+        review: "The quality of education here is outstanding, and it shows in my grades!",
     },
 ];
 
