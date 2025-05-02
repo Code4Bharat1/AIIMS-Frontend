@@ -23,7 +23,7 @@ const ContactInfo = () => (
     <div className={`flex flex-col gap-4`}>
         {contactDetails.map((item, idx) => (
             <div key={idx} className="flex items-start gap-2">
-                <Image src={item.icon} alt="" className="h-6 w-6" width={1000} height={1000} />
+                <Image src={item.icon} alt="" className="h-6 w-6 mt-2" width={1000} height={1000} />
                 {item.isEmail ? (
                     <Link
                         href={`mailto:${item.text}`}
@@ -43,7 +43,7 @@ const Address = () => {
     return (
         <div className="flex flex-col lg:flex-row justify-start relative mt-10 mb-10 px-4 lg:px-0">
             {/* Desktop layout with background */}
-            <div className="hidden lg:flex bg-[#AFDDFF] h-[400px] w-[700px] rounded-r-full relative z-10 items-center px-10 pr-48">
+            <div className="hidden lg:flex bg-[#AFDDFF] h-[400px] w-[700px] rounded-r-full relative z-10 items-center px-10 pr-48 text-2xl ">
                 <div className="flex-1" />
                 <ContactInfo />
             </div>

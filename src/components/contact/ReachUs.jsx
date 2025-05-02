@@ -114,7 +114,7 @@ const ReachUs = () => {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none"
+              className="bg-white p-2 rounded-lg text-black text-md outline-none text-center placeholder:text-black"
             />
             <input
               type="email"
@@ -122,7 +122,7 @@ const ReachUs = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full"
+              className="bg-white p-2 rounded-lg text-black text-md outline-none w-full text-center placeholder:text-black"
             />
             <input
               type="tel"
@@ -130,7 +130,7 @@ const ReachUs = () => {
               placeholder="Mobile Number"
               value={formData.mobile}
               onChange={handleChange}
-              className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full"
+              className="bg-white p-2 rounded-lg text-black text-md outline-none w-full text-center placeholder:text-black"
             />
             <input
               type="text"
@@ -138,14 +138,14 @@ const ReachUs = () => {
               placeholder="Subject"
               value={formData.subject}
               onChange={handleChange}
-              className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full"
+              className="bg-white p-2 rounded-lg text-black text-md outline-none w-full text-center placeholder:text-black"
             />
             <textarea
               name="message"
               placeholder="Message"
               value={formData.message}
               onChange={handleChange}
-              className="bg-[#D9D9D9] p-2 rounded-lg text-black text-md outline-none w-full resize-none col-span-1 lg:col-span-2"
+              className="bg-white p-2 rounded-lg text-black text-md outline-none w-full resize-none col-span-1 lg:col-span-2 placeholder:text-black"
             />
             {error && (
               <p className="text-red-300 text-sm w-full text-left col-span-1 lg:col-span-2">
