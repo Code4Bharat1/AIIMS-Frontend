@@ -1,9 +1,9 @@
-import About from '@/components/About';
-import Hero from '@/components/Hero';
-import TeacherCard from '@/components/InstructorsProfileCard';
+import About from '@/components/common/About';
+import Hero from '@/components/common/Hero';
+import TeacherCard from '@/components/common/InstructorsProfileCard';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
-import WhyChooseUs from '@/components/WhyChooseUs';
+import WhyChooseUs from '@/components/common/WhyChooseUs';
 import { instructorDetails } from '@/utils/data';
 import React from 'react';
 

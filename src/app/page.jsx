@@ -1,17 +1,18 @@
 "use client";
 import Navbar from "../components/layout/Navbar";
-import Hero from "@/components/Hero";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Testimonials from "@/components/Testimonials";
-import About from "@/components/About";
+import Hero from "@/components/common/Hero";
+import WhyChooseUs from "@/components/common/WhyChooseUs";
+import Testimonials from "@/components/common/Testimonials";
+import About from "@/components/common/About";
 import Footer from "@/components/layout/Footer";
-import TeacherCard from "@/components/InstructorsProfileCard";
+import TeacherCard from "@/components/common/InstructorsProfileCard";
 import { instructorDetails } from "@/utils/data";
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Alumni from "@/components/Alumni";
+import Alumni from "@/components/home/Alumni";
 
-import FloatingButtons from "@/components/FloatingButtons";
+import FloatingButtons from "@/components/home/FloatingButtons";
+import Highlights from "@/components/home/Highlights";
 export default function Home() {
   const scrollRef = useRef(null);
 
@@ -23,13 +24,6 @@ export default function Home() {
     scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
-  const stats = [
-    { value: "1232+", label: "Students" },
-    { value: "13+", label: "Courses" },
-    { value: "--+", label: "Experience" },
-    { value: "12+", label: "Trainers" },
-  ];
-
   return (
     <>
       <Navbar />
@@ -40,17 +34,7 @@ export default function Home() {
         bgImg="/Hero/Home.jpg"
       />
       <WhyChooseUs />
-      <div className="bg-[#2467C9] text-white py-10">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold">{stat.value}</div>
-              <div className="text-lg">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      <Highlights />
       <About />
       <Alumni />
 

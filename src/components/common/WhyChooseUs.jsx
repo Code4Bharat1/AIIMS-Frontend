@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react"
 import { whyChooseUs } from "@/utils/data"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 const WhyChooseUs = () => {
     const scrollContainerRef = useRef(null)
@@ -97,10 +98,12 @@ const WhyChooseUs = () => {
                                     key={item.title}
                                     className="bg-[#AFDDFF] hover:bg-[#2467C9] hover:text-white transition-all duration-500 cursor-pointer text-black rounded-3xl p-8 w-[310px] h-[480px] flex flex-col items-center text-center shrink-0"
                                 >
-                                    <img
+                                    <Image
                                         src={item.imgPath}
                                         alt={item.title}
                                         className="w-[97px] h-[65px] object-contain object-center mb-4"
+                                        width={1000}
+                                        height={1000}
                                     />
                                     <h3 className="text-[22px] font-semibold leading-tight mb-2">{item.title}</h3>
                                     <p className="text-xl leading-tight">{item.description}</p>

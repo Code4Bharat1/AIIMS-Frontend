@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 
 const contactDetails = [
@@ -22,7 +23,7 @@ const ContactInfo = () => (
     <div className={`flex flex-col gap-4`}>
         {contactDetails.map((item, idx) => (
             <div key={idx} className="flex items-start gap-2">
-                <img src={item.icon} alt="" className="h-6 w-6" />
+                <Image src={item.icon} alt="" className="h-6 w-6" width={1000} height={1000} />
                 {item.isEmail ? (
                     <Link
                         href={`mailto:${item.text}`}
