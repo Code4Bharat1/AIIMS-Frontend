@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import Hero from "@/components/Hero";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -17,6 +16,9 @@ export default function Home() {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
+
+
+
     const scrollAmount = direction === "left" ? -350 : 350;
     scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
