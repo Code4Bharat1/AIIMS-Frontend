@@ -61,8 +61,8 @@ export default function Footer() {
           <p href="tel:9870780524" className="mt-2 text-sm flex items-center gap-2">
             <FaPhoneAlt />
             <span>
-              <Link href="tel:+919870780524">+91 9870780524</Link> /
-              <Link href="tel:+918779955027"> +91 8779955027</Link>
+              <Link href="tel:+919870780524">+91 9870780524</Link> / 
+              <Link href="tel:+918779955027">+91 8779955027</Link>
             </span>
           </p>
           <p className="mt-1 text-sm flex items-center gap-2">
