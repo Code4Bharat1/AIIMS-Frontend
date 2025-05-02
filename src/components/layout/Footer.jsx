@@ -13,6 +13,15 @@ const footerLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+const iconsLink = [
+  { icon: IoLogoInstagram, link: "https://www.instagram.com/_aim_tutorials?igsh=eGV0NGNlcmticngw" },
+  { icon: RiFacebookFill, link: "https://www.facebook.com/profile.php?id=100091183034102&mibextid=ZbWKwL" },
+  {
+    icon: FaYoutube,
+    link: "https://youtube.com/@kishorghodke-xe6xn?si=DeE7pLXxbuq_kL2q",
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#181d38] text-white py-8 px-4 md:px-16">
@@ -54,14 +63,24 @@ export default function Footer() {
             +91 9870780524 / +91 8779955027
           </p>
           <p className="mt-1 text-sm flex items-center gap-2">
-            <IoMail />ghodke.kishor@yahoo.in
+            <IoMail />
+            ghodke.kishor@yahoo.in
           </p>
           <div className="flex space-x-2 mt-3">
-            {[IoLogoInstagram, RiFacebookFill, FaYoutube].map((Icon, i) => (
-              <div key={i} className="border border-white rounded-full p-1">
-                <Icon />
-              </div>
-            ))}
+            {iconsLink.map((item, i) => {
+              const IconComponent = item.icon;
+              return (
+                <Link
+                  key={i}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-white rounded-full p-1 hover:bg-white hover:text-black transition"
+                >
+                  <IconComponent size={24} />
+                </Link>
+              );
+            })}
           </div>
         </div>
 
@@ -69,8 +88,8 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2">About Us</h3>
           <p className="text-sm">
             At AIM Tutorials, we offer advanced classrooms, parent-teacher
-            meetings, topnotch teacher, and a leading curriculum. Experience
-            the best in education with us..
+            meetings, topnotch teacher, and a leading curriculum. Experience the
+            best in education with us..
           </p>
         </div>
       </div>
