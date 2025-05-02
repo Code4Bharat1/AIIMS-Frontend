@@ -1,7 +1,4 @@
 "use client"
-import About from '@/components/About';
-import Hero from '@/components/Hero';
-import TeacherCard from '@/components/InstructorsProfileCard';
 import About from '@/components/common/About';
 import Hero from '@/components/common/Hero';
 import TeacherCard from '@/components/common/InstructorsProfileCard';
