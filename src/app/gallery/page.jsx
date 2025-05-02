@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <Hero heading1="Gallery" />
+      <Hero heading1="Gallery" bgImg={"/Hero/Gallery.png"} />
       <GalleryImg />
       <Footer />
     </div>

@@ -35,6 +35,7 @@ export default function Home() {
         heading2="The Most Trusted Coaching Institute"
         heading1="AIM Tutorials Education Institute"
         heading3="Equipping students with quality education, expert mentorship, and state-of-the-art facilities"
+        bgImg="/Hero/Home.jpg"
       />
       <WhyChooseUs />
       <div className="bg-[#2467C9] text-white py-10">

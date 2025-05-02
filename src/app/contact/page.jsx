@@ -8,7 +8,7 @@ export default function contactPage() {
   return (
     <div>
       <Navbar />
-      <Hero heading1="Contact Us" />
+      <Hero heading1="Contact Us" bgImg={"/Hero/Contact.png"} />
       <Address />
       <ReachUs />
       <Footer />
