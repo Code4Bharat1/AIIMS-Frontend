@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import {
   FaFacebookF,
   FaYoutube,
@@ -32,44 +34,44 @@ export default function TeacherCard({ image, name, education, social }) {
         {/* Social Links */}
         <div className="flex justify-center gap-3 mt-4">
           {social.facebook && (
-            <a
+            <Link
               href={social.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#2467C9] p-2 rounded-sm"
             >
               <FaFacebookF className="text-white text-lg" />
-            </a>
+            </Link>
           )}
           {social.youtube && (
-            <a
+            <Link
               href={social.youtube}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#2467C9] p-2 rounded-sm"
             >
               <FaYoutube className="text-white text-lg" />
-            </a>
+            </Link>
           )}
           {social.instagram && (
-            <a
+            <Link
               href={social.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#2467C9] p-2 rounded-sm"
             >
               <FaInstagram className="text-white text-lg" />
-            </a>
+            </Link>
           )}
           {social.linkedin && (
-            <a
+            <Link
               href={social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#2467C9] p-2 rounded-sm"
             >
               <FaLinkedinIn className="text-white text-lg" />
-            </a>
+            </Link>
           )}
         </div>
       </div>

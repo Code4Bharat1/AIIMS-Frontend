@@ -44,18 +44,21 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact</h3>
           <p className="text-sm flex items-start gap-2">
-            <FaLocationDot className="text-xl mt-1" />
+            <FaLocationDot size={30} className="text-xl -mt-1" />
             19, Sunil Sadan, 3rd Floor, Central Avenue Road, Near Ambedkar
             Garden, Opp. of Grand Central hotel, Above Monginis OR Yewle Tea,
             Chembur(East)-71
           </p>
-          <p className="mt-2 text-sm flex items-center gap-2">
+          <p href="tel:9870780524" className="mt-2 text-sm flex items-center gap-2">
             <FaPhoneAlt />
-            +91 9870780524 / +91 8779955027
+            <span>
+              <Link href="tel:+919870780524">+91 9870780524</Link> /
+              <Link href="tel:+918779955027"> +91 8779955027</Link>
+            </span>
           </p>
-          <p className="mt-1 text-sm flex items-center gap-2">
+          <Link href="mailto:ghodke.kishor@yahoo.in" className="mt-1 text-sm flex items-center gap-2">
             <IoMail />ghodke.kishor@yahoo.in
-          </p>
+          </Link>
           <div className="flex space-x-2 mt-3">
             {[IoLogoInstagram, RiFacebookFill, FaYoutube].map((Icon, i) => (
               <div key={i} className="border border-white rounded-full p-1">

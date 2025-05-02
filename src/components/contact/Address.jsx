@@ -1,5 +1,7 @@
 'use client';
 
+import Link from "next/link";
+
 const contactDetails = [
     {
         icon: '/officeAddressIcon.png',
@@ -22,12 +24,12 @@ const ContactInfo = () => (
             <div key={idx} className="flex items-start gap-2">
                 <img src={item.icon} alt="" className="h-6 w-6" />
                 {item.isEmail ? (
-                    <a
+                    <Link
                         href={`mailto:${item.text}`}
                         className={`underline hover:text-[#2467C9] hover:underline-offset-2`}
                     >
                         {item.text}
-                    </a>
+                    </Link>
                 ) : (
                     <p>{item.text}</p>
                 )}
