@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/components/common/Hero";
 import Navbar from "@/components/layout/Navbar";
 import GalleryImg from "@/components/gallery/GalleryImg";
 import Footer from "@/components/layout/Footer";

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 import { testimonialsData } from "@/utils/data";
+import Image from "next/image";
 
 const Testimonials = () => {
     const [index, setIndex] = useState(0);
@@ -73,10 +74,12 @@ const Testimonials = () => {
                         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-full gap-4">
                             {/* Student Info */}
                             <div className="flex items-center gap-4">
-                                <img
+                                <Image
                                     src={current.imgPath}
                                     alt={current.name}
                                     className="h-16 w-16 lg:h-20 lg:w-20 rounded-full"
+                                    width={1000}
+                                    height={1000}
                                 />
                                 <div>
                                     <p className="text-base lg:text-xl font-light">{current.clg}</p>

@@ -1,16 +1,16 @@
-import Hero from '@/components/Hero';
+import Hero from '@/components/common/Hero';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
-import Result from '@/components/Result';
-import Testimonials from '@/components/Testimonials';
+import Result from '@/components/common/Result';
+import Testimonials from '@/components/common/Testimonials';
 import React from 'react';
 
 const page = () => {
   return (
     <div>
       <Navbar />
-      <Hero heading1="Result" bgImg={"/Hero/Result.png"}/>
-      <Result/>
+      <Hero heading1="Result" bgImg={"/Hero/Result.png"} />
+      <Result />
       <Testimonials />
       <Footer />
     </div>

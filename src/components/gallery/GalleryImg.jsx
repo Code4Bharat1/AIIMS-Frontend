@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 import { galleryImgs } from '@/utils/data';
+import Image from 'next/image';
 
 const GalleryImg = () => {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -31,10 +32,12 @@ const GalleryImg = () => {
             onClick={() => handleClick(imgPath)}
             className="cursor-pointer relative group"
           >
-            <img
+            <Image
               src={imgPath}
               alt={`Gallery image ${id}`}
               className="w-full h-auto object-cover shadow-md transition-transform duration-300 "
+              width={1000}
+              height={1000}
               ref={(el) => (imgRefs.current[imgPath] = el)}
             />
 
@@ -83,10 +86,12 @@ const GalleryImg = () => {
                 <X size={30} strokeWidth={5} />
               </button>
 
-              <img
+              <Image
                 src={selectedImg}
                 alt="Enlarged"
                 className="shadow-xl w-[600px] h-[600px] max-h-[80vh] max-w-[90vw]"
+                width={1000}
+                height={1000}
               />
             </motion.div>
           </motion.div>

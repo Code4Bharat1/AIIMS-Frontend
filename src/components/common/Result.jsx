@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
 import { resultImage } from "@/utils/data";
+import Image from "next/image";
 
 export default function Result() {
   return (
@@ -12,14 +12,16 @@ export default function Result() {
             onClick={() => setSelectedImg(imgPath)}
             className="cursor-pointer relative group"
           >
-            <img
+            <Image
               src={imgPath}
               alt={`Gallery image ${id}`}
               className="w-full h-auto object-cover rounded shadow-md transition-transform duration-300"
+              width={1000}
+              height={1000}
             />
           </div>
         ))}
       </div>
-      </div>
+    </div>
   )
 }
