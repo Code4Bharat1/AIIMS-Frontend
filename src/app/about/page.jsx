@@ -1,5 +1,4 @@
 "use client"
-import About from '@/components/common/About';
 import Hero from '@/components/common/Hero';
 import TeacherCard from '@/components/common/InstructorsProfileCard';
 import Footer from '@/components/layout/Footer';
@@ -9,14 +8,14 @@ import { instructorDetails } from '@/utils/data';
 import React from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import About from '@/components/common/About';
-import { useState } from "react"; 
+import { useState } from "react";
 
 const page = () => {
-const [visibleCount, setVisibleCount] = useState(3);
+  const [visibleCount, setVisibleCount] = useState(3);
 
-const handleLoadMore = () => {
-  setVisibleCount((prev) => prev + 3);
-};
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
 
   return (
     <div>
