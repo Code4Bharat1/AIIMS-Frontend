@@ -11,7 +11,6 @@ const Testimonials = () => {
     const [isAnimating, setIsAnimating] = useState(false);
     const current = testimonialsData[index];
 
-    // Auto-rotate testimonials every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             if (!isAnimating) {

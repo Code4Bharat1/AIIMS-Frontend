@@ -17,9 +17,6 @@ export default function Home() {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
-
-
-
     const scrollAmount = direction === "left" ? -350 : 350;
     scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
@@ -31,6 +28,12 @@ export default function Home() {
         heading2="The Most Trusted Coaching Institute"
         heading1="AIM Tutorials Education Institute"
         heading3="Equipping students with quality education, expert mentorship, and state-of-the-art facilities"
+        highlightWords={[
+          "quality education",
+          "expert mentorship",
+          "state-of-the-art facilities",
+        ]}
+        highlightClass="text-[#AFDDFF] font-semibold"
         bgImg="/Hero/Home.jpg"
       />
       <WhyChooseUs />

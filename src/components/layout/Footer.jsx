@@ -7,10 +7,10 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 
 const footerLinks = [
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Us" },
   { href: "/result", label: "Result" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 const iconsLink = [
@@ -53,20 +53,27 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact</h3>
           <p className="text-sm flex items-start gap-2">
-            <FaLocationDot size={30} className="text-xl -mt-1" />
+            <FaLocationDot  className="text-4xl -mt-[6px]" />
             19, Sunil Sadan, 3rd Floor, Central Avenue Road, Near Ambedkar
             Garden, Opp. of Grand Central hotel, Above Monginis OR Yewle Tea,
             Chembur(East)-71
           </p>
-          <p href="tel:9870780524" className="mt-2 text-sm flex items-center gap-2">
-            <FaPhoneAlt />
+          <p
+            href="tel:9870780524"
+            className="mt-2 text-sm flex items-center gap-2"
+          >
+            <FaPhoneAlt className="mt-[5px]" />
             <span>
               <Link href="tel:+919870780524">+91 9870780524</Link> /
               <Link href="tel:+918779955027">+91 8779955027</Link>
             </span>
           </p>
-          <Link href="mailto:ghodke.kishor@yahoo.in" className="mt-1 text-sm flex items-center gap-2">
-            <IoMail />ghodke.kishor@yahoo.in
+          <Link
+            href="mailto:ghodke.kishor@yahoo.in"
+            className="mt-1 text-sm flex items-center gap-2"
+          >
+            <IoMail className="mt-[5px]" />
+            ghodke.kishor@yahoo.in
           </Link>
           <div className="flex space-x-2 mt-3">
             {iconsLink.map((item, i) => {

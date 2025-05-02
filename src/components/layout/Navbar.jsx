@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
+    { href: "/about", label: "About Us" },
     { href: "/result", label: "Result" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact" },
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className={`sticky top-0 z-50 bg-white shadow-lg transition-all duration-300 ${!isOpen ? 'rounded-b-[2.5rem]' : ''}`}>
             <nav className="flex justify-between items-center px-6 md:px-16 py-3 h-24">
                 {/* Clickable Logo */}
-                <div className="w-32 sm:w-40 md:w-52">
+                <div className="w-32 sm:w-40 md:w-52 -ml-7">
                     <Link href="/" aria-label="Homepage">
                         <Image
                             src="/Navbar&Footer/AIMLOGO.png"

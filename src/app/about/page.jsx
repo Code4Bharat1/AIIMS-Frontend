@@ -8,14 +8,28 @@ import { instructorDetails } from '@/utils/data';
 import React from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import About from '@/components/common/About';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const page = () => {
   const [visibleCount, setVisibleCount] = useState(3);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 640);
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 3);
   };
+
+  const displayedInstructors = isMobile
+    ? instructorDetails.slice(0, visibleCount)
+    : instructorDetails;
 
   return (
     <div>
@@ -58,13 +72,13 @@ const page = () => {
       <div className="w-full flex flex-col items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 py-8">
           <AnimatePresence>
-            {instructorDetails.slice(0, visibleCount).map((instructor, idx) => (
+            {displayedInstructors.map((instructor, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.4 }}
               >
                 <TeacherCard
                   image={instructor.image}
@@ -77,7 +91,8 @@ const page = () => {
           </AnimatePresence>
         </div>
 
-        {visibleCount < instructorDetails.length && (
+        {/* Show Load More only on mobile and if more instructors exist */}
+        {isMobile && visibleCount < instructorDetails.length && (
           <motion.button
             onClick={handleLoadMore}
             className="my-4 px-6 py-2 bg-[#2467C9] text-white rounded hover:bg-blue-700 transition"
