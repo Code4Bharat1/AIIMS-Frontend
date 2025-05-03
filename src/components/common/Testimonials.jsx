@@ -39,11 +39,11 @@ const Testimonials = () => {
     return (
       <div className="flex flex-col  lg:flex-row justify-end relative mt-20 mb-20 px-4 lg:px-0">
         {/* Blue background div - hidden on mobile, shown on lg screens */}
-        <div className="hidden lg:flex bg-[#AFDDFF] h-[500px] w-[1200px] rounded-l-full relative z-10 items-center justify-between px-10">
+        <div className="hidden lg:flex bg-[#AFDDFF] h-[500px] lg:w-[800px] xl:w-[1000px] rounded-l-full relative z-10 items-center justify-between px-10">
           <div className="flex-1" />
-          <div className="flex flex-col gap-9 mr-44">
+          <div className="flex flex-col gap-9 xl:m-24">
             <h1 className="text-[32px]">TESTIMONIALS</h1>
-            <p className="text-6xl text-left font-medium">
+            <p className="text-5xl text-left font-medium">
               What Our Students <br /> Say!
             </p>
           </div>
@@ -55,7 +55,7 @@ const Testimonials = () => {
           <p className="text-2xl text-[#2467C9]">What Our Students Say!</p>
         </div>
 
-        <div className="relative lg:absolute w-full lg:w-[500px] lg:left-[calc(100%-1400px)] lg:top-1/2 lg:-translate-y-1/2 h-84 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-16 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
+        <div className="relative lg:absolute w-full lg:w-[500px] xl:w[600] lg:left-[calc(100%-1000px)] xl:left-[calc(100%-1200px)] lg:top-1/2 lg:-translate-y-1/2 h-84 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-16 p-6 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
           <AnimatePresence onExitComplete={completeAnimation}>
             <motion.div
               key={index}
@@ -91,7 +91,7 @@ const Testimonials = () => {
         </div>
 
         {/* Navigation buttons - position changes based on screen size */}
-        <div className="flex lg:flex-col flex-row-reverse justify-center gap-4 lg:gap-2 mt-6 lg:mt-0 lg:absolute lg:left-[calc(100%-1400px+460px)] lg:top-1/2 lg:-translate-y-1/2 z-30 lg:ml-4">
+        <div className="flex lg:flex-col flex-row-reverse justify-center gap-4 lg:gap-2 mt-6 lg:mt-0 lg:absolute lg:left-[calc(100%-1000px+460px)] xl:left-[calc(100%-1200px+460px)] lg:top-1/2 lg:-translate-y-1/2 z-30 lg:ml-4">
           <button
             onClick={handlePrev}
             disabled={isAnimating}
