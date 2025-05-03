@@ -48,26 +48,29 @@ export default function Home() {
           {/* Left Scroll Button */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md "
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md"
           >
             <FaChevronLeft className="text-[#2467C9]" />
           </button>
 
-          {/* Scrollable Container */}
-          <div
-            className="w-full overflow-x-auto scrollbar-hidden"
-            ref={scrollRef}
-          >
-            <div className="flex gap-8 px-3 py-8 min-w-max">
-              {instructorDetails.map((instructor, idx) => (
-                <TeacherCard
-                  key={idx}
-                  image={instructor.image}
-                  name={instructor.name}
-                  education={instructor.education}
-                  social={instructor.social}
-                />
-              ))}
+          <div className="flex mx-10 items-center">
+            {/* Scrollable Container */}
+            <div
+              className="w-full flex items-center  overflow-x-auto scrollbar-hidden snap-x snap-mandatory"
+              ref={scrollRef}
+            >
+              <div className=" items-center flex gap-8 justify-center px-3 py-8 min-w-max">
+                {instructorDetails.map((instructor, idx) => (
+                  <div key={idx} className="snap-start flex-shrink-1 sm:w-auto ">
+                    <TeacherCard
+                      image={instructor.image}
+                      name={instructor.name}
+                      education={instructor.education}
+                      social={instructor.social}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -80,6 +83,7 @@ export default function Home() {
           </button>
         </div>
       </div>
+
       <Testimonials />
       <FloatingButtons />
       <Footer />
