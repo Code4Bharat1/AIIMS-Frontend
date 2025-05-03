@@ -39,7 +39,7 @@ const Testimonials = () => {
     return (
       <div className="flex flex-col  lg:flex-row justify-end relative mt-20 mb-20 px-4 lg:px-0">
         {/* Blue background div - hidden on mobile, shown on lg screens */}
-        <div className="hidden lg:flex bg-[#AFDDFF] h-[600px] w-[1200px] rounded-l-full relative z-10 items-center justify-between px-10">
+        <div className="hidden lg:flex bg-[#AFDDFF] h-[500px] w-[1200px] rounded-l-full relative z-10 items-center justify-between px-10">
           <div className="flex-1" />
           <div className="flex flex-col gap-9 mr-44">
             <h1 className="text-[32px]">TESTIMONIALS</h1>
