@@ -14,7 +14,7 @@ export const whyChooseUs = [
       "All subjects are offered under one roof, providing a comprehensive and convenient learning experience. Students benefit from a seamless education journey without the need to seek external resources.",
   },
   {
-    imgPath: "/Book.png",
+    imgPath: "/Home.png",
     title:
       "Subject wise best • faculty in the industry",
     description:
