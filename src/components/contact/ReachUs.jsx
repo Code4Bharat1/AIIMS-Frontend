@@ -60,8 +60,8 @@ const ReachUs = () => {
 
 
   return (
-    <div className="flex flex-col xl:flex-row justify-end relative mb-30 px-4 xl:px-0">
-      <div className="hidden xl:flex bg-[#AFDDFF] h-[600px] w-[1200px] rounded-l-full relative z-10 pr-56 items-center justify-between">
+    <div className="flex flex-col lg:flex-row justify-end relative mb-30 px-4 lg:px-0">
+      <div className="hidden lg:flex bg-[#AFDDFF] h-[600px] lg:w-[800px] xl:w-[1100px] xl:pr-56 lg:pr-12 rounded-l-full relative z-10  items-center justify-between">
         <div className="flex-1" />
         <div className="flex flex-col gap-9">
           <h1 className="text-5xl font-semibold">
@@ -72,28 +72,30 @@ const ReachUs = () => {
             <br />
             At AIM Tutorials , we offer advanced <br />
             classrooms, personalized attention, <br />
-            regular parent-teacher meetings,<br />
-            top-notch teachers, and a leading <br /> curriculum. Experience the best in <br />
+            regular parent-teacher meetings,
+            <br />
+            top-notch teachers, and a leading <br /> curriculum. Experience the
+            best in <br />
             education with us.
           </p>
         </div>
       </div>
 
-      <div className="xl:hidden mb-8 text-center">
+      <div className="lg:hidden mb-8 text-center">
         <h1 className="text-3xl font-bold mb-2">Feel free to Contact Us</h1>
         <p className="text-2xl text-[#2467C9]">
           <span className="font-semibold">Get In Touch</span>
           <br />
           At AIM Tutorials , we offer advanced classrooms, personalized
-          attention, regular parent-teacher meetings, top-notch teachers, and
-          a leading curriculum. Experience the best in education with us.
+          attention, regular parent-teacher meetings, top-notch teachers, and a
+          leading curriculum. Experience the best in education with us.
         </p>
       </div>
 
-      <div className="relative w-full  max-w-[500px] xl:absolute xl:w-[500px] xl:left-[calc(100%-1400px)] xl:top-1/2 xl:-translate-y-1/2 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center xl:items-start gap-8 p-4 xl:p-9 text-white overflow-hidden mx-auto xl:mx-0">
+      <div className="relative w-full  max-w-[500px] lg:absolute lg:w-[450px] xl:w-[500px] lg:left-[calc(100%-1000px)] xl:left-[calc(100%-1300px)] lg:top-1/2 lg:-translate-y-1/2 bg-[#2467C9] z-20 rounded-2xl flex flex-col justify-center items-center lg:items-start gap-8 p-4 lg:p-9 text-white overflow-hidden mx-auto lg:mx-0">
         <form
           onSubmit={handleSubmit}
-          className="w-full grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-8 text-center xl:text-left"
+          className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 text-center lg:text-left"
         >
           <input
             type="text"
@@ -132,19 +134,19 @@ const ReachUs = () => {
             placeholder="Message"
             value={formData.message}
             onChange={handleChange}
-            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full resize-none col-span-1 xl:col-span-2 placeholder:text-black/50"
+            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full resize-none col-span-1 lg:col-span-2 placeholder:text-black/50"
           />
           {error && (
-            <p className="text-red-300 text-sm w-full text-left col-span-1 xl:col-span-2">
+            <p className="text-red-300 text-sm w-full text-left col-span-1 lg:col-span-2">
               {error}
             </p>
           )}
           {success && (
-            <p className="text-green-300 text-sm w-full text-left col-span-1 xl:col-span-2">
+            <p className="text-green-300 text-sm w-full text-left col-span-1 lg:col-span-2">
               {success}
             </p>
           )}
-          <div className="flex w-full justify-end col-span-1 xl:col-span-2">
+          <div className="flex w-full justify-end col-span-1 lg:col-span-2">
             <button
               type="submit"
               className="bg-[#AFDDFF] hover:bg-[#bfe3ff] cursor-pointer px-4 py-2 rounded-xl text-black self-end active:scale-90"
