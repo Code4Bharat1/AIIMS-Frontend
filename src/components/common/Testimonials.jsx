@@ -43,7 +43,7 @@ const Testimonials = () => {
           <div className="flex-1" />
           <div className="flex flex-col gap-9">
             <h1 className="text-[32px]">TESTIMONIALS</h1>
-            <p className="text-5xl text-left font-medium ml-4">
+            <p className="text-5xl text-left font-medium">
               What Our Students <br /> Say!
             </p>
           </div>
