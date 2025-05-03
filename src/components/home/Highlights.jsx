@@ -4,15 +4,16 @@ import CountUp from "react-countup";
 import { stats } from "@/utils/data";
 
 const Highlights = () => {
-  const [startAnimation, setStartAnimation] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0); // Key to force remount
   const { ref, inView } = useInView({
     threshold: 0.3,
-    triggerOnce: true,  
+    triggerOnce: false,
   });
 
   useEffect(() => {
     if (inView) {
-      setStartAnimation(true);
+      // Update the key to force CountUp components to remount and restart animation
+      setAnimationKey(prevKey => prevKey + 1);
     }
   }, [inView]);
 
@@ -26,8 +27,10 @@ const Highlights = () => {
           return (
             <div key={index} className="text-center">
               <div className="text-4xl font-bold">
-                {startAnimation ? (
+                {inView ? (
                   <CountUp
+                    key={`${index}-${animationKey}`} // Unique key based on animationKey
+                    start={0}
                     end={numericValue}
                     duration={1.5}
                     suffix={hasPlus ? "+" : ""}
