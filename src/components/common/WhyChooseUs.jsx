@@ -105,8 +105,19 @@ const WhyChooseUs = () => {
                                         width={1000}
                                         height={1000}
                                     />
-                                    <h3 className="text-[22px] font-semibold leading-tight mb-2">{item.title}</h3>
-                                    <p className="text-xl leading-tight">{item.description}</p>
+                                    <h3 className="text-[22px] font-semibold leading-tight mb-2">
+                                        {item.title.split(' • ').map((line, i) => (
+                                            <span key={i} className="block">
+                                                {line}
+                                            </span>
+                                        ))}
+                                    </h3>
+                                    <p className="text-xl leading-tight">
+                                        {item.description.split(' • ').map((line, i) => (
+                                        <span key={i} className="block">
+                                            {line}
+                                        </span>
+                                    ))}</p>
                                 </div>
                             ))}
                         </div>
