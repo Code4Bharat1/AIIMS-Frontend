@@ -52,7 +52,7 @@ const ReachUs = () => {
       `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nSubject: ${subject}\nMessage: ${message}`
     );
 
-    const phone = '919112705078'; // WhatsApp number in international format without "+" or dashes
+    const phone = '919870780524'; // WhatsApp number in international format without "+" or dashes
     const url = `https://wa.me/${phone}?text=${encodedMessage}`;
 
     window.open(url, '_blank');
