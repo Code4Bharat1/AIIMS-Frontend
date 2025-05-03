@@ -27,7 +27,7 @@ const ContactInfo = () => (
                 {item.isEmail ? (
                     <Link
                         href={`mailto:${item.text}`}
-                        className={`underline hover:text-[#2467C9] hover:underline-offset-2`}
+                        className={`hover:text-[#2467C9]`}
                     >
                         {item.text}
                     </Link>
