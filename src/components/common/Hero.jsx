@@ -72,7 +72,7 @@ const Hero = ({
           {heading1}
         </h1>
         <h3
-          className={`text-[18px] sm:text-[20px] md:text-[21px] font-semibold 
+          className={`text-[18px] sm:text-[20px] md:text-[23px] font-semibold 
           ${
             show
               ? "opacity-100 translate-y-0 transition-all duration-1000 ease-out"

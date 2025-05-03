@@ -41,9 +41,9 @@ const Testimonials = () => {
         {/* Blue background div - hidden on mobile, shown on lg screens */}
         <div className="hidden lg:flex bg-[#AFDDFF] h-[500px] lg:w-[800px] xl:w-[1000px] rounded-l-full relative z-10 items-center justify-between px-10">
           <div className="flex-1" />
-          <div className="flex flex-col gap-9 xl:m-24">
+          <div className="flex flex-col gap-15 xl:m-24 xl:mb-44">
             <h1 className="text-[32px]">TESTIMONIALS</h1>
-            <p className="text-5xl text-left font-medium">
+            <p className="text-5xl xl:text-6xl text-left font-medium">
               What Our Students <br /> Say!
             </p>
           </div>
@@ -51,7 +51,7 @@ const Testimonials = () => {
 
         {/* Mobile header - shown only on small screens */}
         <div className="lg:hidden mb-8 text-center">
-          <h1 className="text-3xl font-bold mb-2">Testimonials</h1>
+          <h1 className="text-3xl font-bold mb-8">Testimonials</h1>
           <p className="text-2xl text-[#2467C9]">What Our Students Say!</p>
         </div>
 

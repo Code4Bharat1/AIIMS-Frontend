@@ -80,7 +80,7 @@ const ReachUs = () => {
           </p>
         </div>
       </div>
-
+    {/* Mobile Container */}
       <div className="lg:hidden mb-8 text-center">
         <h1 className="text-3xl font-bold mb-2">Feel free to Contact Us</h1>
         <p className="text-2xl text-[#2467C9]">
@@ -103,7 +103,7 @@ const ReachUs = () => {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className="bg-white p-2  rounded-xl text-black text-xl outline-none placeholder:text-center placeholder:text-black/50"
+            className="bg-white p-2  rounded-xl text-black text-xl outline-none  placeholder:text-black/50"
           />
           <input
             type="email"
@@ -111,7 +111,7 @@ const ReachUs = () => {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full  placeholder:text-center placeholder:text-black/50"
+            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full   placeholder:text-black/50"
           />
           <input
             type="tel"
@@ -119,7 +119,7 @@ const ReachUs = () => {
             placeholder="Mobile Number"
             value={formData.mobile}
             onChange={handleChange}
-            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full placeholder:text-center placeholder:text-black/50"
+            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full  placeholder:text-black/50"
           />
           <input
             type="text"
@@ -127,7 +127,7 @@ const ReachUs = () => {
             placeholder="Subject"
             value={formData.subject}
             onChange={handleChange}
-            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full placeholder:text-center placeholder:text-black/50"
+            className="bg-white p-2 rounded-xl text-black text-xl outline-none w-full  placeholder:text-black/50"
           />
           <textarea
             name="message"
