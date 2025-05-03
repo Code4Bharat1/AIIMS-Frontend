@@ -98,7 +98,7 @@ export default function Footer() {
           <p className="text-sm">
             At AIM Tutorials, we offer advanced classrooms, parent-teacher
             meetings, topnotch teacher, and a leading curriculum. Experience the
-            best in education with us..
+            best in education with us.
           </p>
         </div>
       </div>
