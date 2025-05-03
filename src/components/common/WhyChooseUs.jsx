@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
 
                     <div
                         ref={scrollContainerRef}
-                        className="overflow-x-auto scrollbar-hidden pl-2 pr-2"
+                        className="mx-8 overflow-x-auto scrollbar-hidden pl-2 pr-2 "
                     >
                         <div className="flex gap-6 w-max">
                             {whyChooseUs.map((item) => (
